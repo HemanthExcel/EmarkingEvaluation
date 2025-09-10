@@ -177,3 +177,4 @@ yarl==1.19.0
 zipp==3.21.0
 zstandard==0.23.0
 azure-functions==1.12.0
+psycopg2==2.9.10
