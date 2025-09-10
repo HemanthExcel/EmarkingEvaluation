@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "DB_HOST": "localhost",
+    "DB_PORT": "5432",
+    "DB_NAME": "questionsimilarity",
+    "DB_USER": "postgres",
+    "DB_PASS": "AI@POC",
+    "AZURE_API_KEY": "420cf7e1e6434bc7bf60e8c180b4055f",
+    "AZURE_API_BASE": "https://excelsoftgpt4poc.openai.azure.com/",
+    "AZURE_API_VERSION": "2023-07-01-preview"
+  }
+}
