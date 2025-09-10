@@ -2,14 +2,11 @@ import logging
 import os
 import json
 import azure.functions as func
-from dotenv import load_dotenv
 from langchain.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from crewai import Agent, Task, Crew, Process
 from crewai import LLM
 import tiktoken
-
-load_dotenv()
 
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = int(os.getenv("DB_PORT", "5432"))
