@@ -1,8 +1,6 @@
 import logging
 import os
 import json
-import psycopg2
-from psycopg2 import sql
 import azure.functions as func
 from dotenv import load_dotenv
 from langchain.vectorstores import FAISS
@@ -28,21 +26,6 @@ os.environ["AZURE_API_BASE"] = AZURE_API_BASE
 os.environ["AZURE_API_VERSION"] = AZURE_API_VERSION
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-def calculate_tokens(text, encoding_name='cl100k_base'):
-    encoding = tiktoken.get_encoding(encoding_name)
-    tokens = encoding.encode(text)
-    return len(tokens)
-
-def get_db_connection():
-    conn = psycopg2.connect(
-        host=DB_HOST,
-        port=DB_PORT,
-        database=DB_NAME,
-        user=DB_USER,
-        password=DB_PASS
-    )
-    return conn
-
 class PDFRetrievalAgent(Agent):
     def __init__(self, retriever):
         super().__init__(
